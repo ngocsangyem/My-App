@@ -69,9 +69,37 @@ body {
 	color: #EB4D4D;
 	margin-bottom: 130px;
 }
+#dice-1{
+	top: 100px
+}
+#dice-2{
+	top: 250px
+}
+input[type="text"] {
+	/* height: 30px; */
+	padding: 10px;
+	width: 160px;
+	display: inline-block;
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+input[type="submit"]{
+	height: 30px;
+}
+
+input[type="text"]:focus {
+	outline: none;
+}
 
 .active {
 	background-color: #f7f7f7;
+}
+
+.input-group {
+	display: flex;
+	align-items: center;
 }
 
 .active .player-name {
