@@ -49,7 +49,7 @@ body {
 
 .budget {
 	position: absolute;
-	width: 350px;
+	width: 280px;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -128,7 +128,9 @@ body {
 }
 
 .add__container {
-	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
 }
 
@@ -158,7 +160,7 @@ body {
 }
 
 .add__description {
-	width: 400px;
+	width: 280px;
 }
 
 .add__value {
@@ -194,20 +196,23 @@ body {
 
 /***** LISTS *****/
 .container {
-	width: 1000px;
 	margin: 60px auto;
+	padding: 0 15px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%
 }
+
+
 
 .income {
-	float: left;
-	width: 475px;
-	margin-right: 50px;
+	/* margin-right: 50px; */
 }
 
-.expenses {
-	float: left;
-	width: 475px;
-}
+/* .expenses {
+	max-width: 50%;
+	flex: 0 0 50%;
+} */
 
 h2 {
 	text-transform: uppercase;
@@ -319,4 +324,43 @@ h2 {
 
 .unpaid:hover .item__description {
 	font-weight: 900;
+}
+
+@media (max-width: 991.98px) {
+	.container {
+		flex-direction: column;
+	}
+
+	.container .income {
+		margin-bottom: 2rem;
+	}
+}
+
+@media (min-width: 992px) {
+
+	.income,
+	.expenses {
+		max-width: 50%;
+		flex: 0 0 50%;
+		padding: 0 15px;
+	}
+
+	.budget {
+		width: 350px;
+	}
+
+	.add__description {
+		width: 400px;
+	}
+}
+
+@media (max-width: 500px) {
+	.add__container {
+		flex-direction: column;
+	}
+
+	.add__container .add__type,
+	.add__container .add__description {
+		margin-bottom: 10px;
+	}
 }
